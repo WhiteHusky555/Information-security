@@ -66,10 +66,12 @@ View связывается с ViewModel только через `bind` / `bindB
 Все зависимости — JavaFX 21.0.2 и sqlite-jdbc 3.46.1.3 — подтягиваются автоматически,
 никаких jar-файлов в проекте хранить не надо.
 
+```powershell
+.\gradlew run          запуск приложения
+.\gradlew build        сборка и проверка
 ```
-gradlew run          запуск приложения
-gradlew build        сборка и проверка
-```
+
+В PowerShell обязателен префикс `.\` (в `cmd.exe` достаточно `gradlew run`).
 
 Конфигурация — `build.gradle`: плагин `org.openjfx.javafxplugin` сам формирует module-path
 для JavaFX, sqlite-jdbc подключается обычной зависимостью через classpath,

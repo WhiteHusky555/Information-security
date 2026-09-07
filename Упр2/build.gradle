@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'ru.ineprokin.Main'
+}
+
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+        resources.srcDirs = []
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(22)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+run {
+    standardInput = System.in
+}
