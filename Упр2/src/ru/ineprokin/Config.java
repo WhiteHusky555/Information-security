@@ -11,6 +11,15 @@ public final class Config {
 
     public static final int ADMIN_INDEX = 0;
 
+    public static final String TITLE = "ПР №2. Дискреционная модель политики безопасности — вариант " + VARIANT;
+    public static final double WINDOW_WIDTH = 980;
+    public static final double WINDOW_HEIGHT = 700;
+    public static final String MONO_FONT = "Consolas";
+
+    public static final String STYLE_OK = "-fx-text-fill: #1b7a2f; -fx-font-weight: bold;";
+    public static final String STYLE_ERROR = "-fx-text-fill: #b00000; -fx-font-weight: bold;";
+    public static final String STYLE_HINT = "-fx-text-fill: #555555; -fx-font-size: 11px;";
+
     private Config() {
     }
 }
