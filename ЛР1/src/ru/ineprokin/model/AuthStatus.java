@@ -1,0 +1,5 @@
+package ru.ineprokin.model;
+
+public enum AuthStatus {
+    SUCCESS, WRONG_PASSWORD, UNKNOWN_USER, LOCKED, EXPIRED, WEAK_PASSWORD, DUPLICATE_LOGIN, REGISTERED
+}

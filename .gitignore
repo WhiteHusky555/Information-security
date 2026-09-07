@@ -1,0 +1,36 @@
+# библиотеки: подтягивает Gradle
+lib/
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# сборка
+.gradle/
+out/
+bin/
+build/
+target/
+*.class
+*.jar.tmp
+sources.txt
+
+# база данных, создаётся при запуске
+*.db
+*.db-shm
+*.db-wal
+
+# среды разработки
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+*.launch
+
+# система
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp
+*.log
