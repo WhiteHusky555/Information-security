@@ -13,7 +13,7 @@ javafx {
 }
 
 application {
-    mainClass = 'ru.ineprokin.Main'
+    mainClass = 'ru.ineprokin.Launcher'
 }
 
 sourceSets {
@@ -31,4 +31,21 @@ java {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
+}
+
+def appName = 'Дискреционная модель'
+
+tasks.register('appImage', Exec) {
+    group = 'distribution'
+    description = 'Собирает Дискреционная модель.exe, запускаемый двойным кликом без консоли'
+    dependsOn tasks.installDist
+    def dest = layout.buildDirectory.dir('app').get().asFile
+    doFirst { delete file("$dest/$appName") }
+    commandLine "${System.properties['java.home']}/bin/jpackage",
+            '--type', 'app-image',
+            '--input', layout.buildDirectory.dir("install/${project.name}/lib").get().asFile,
+            '--main-jar', "${project.name}.jar",
+            '--main-class', 'ru.ineprokin.Launcher',
+            '--name', appName,
+            '--dest', dest
 }

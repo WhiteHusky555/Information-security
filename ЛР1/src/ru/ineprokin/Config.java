@@ -25,10 +25,14 @@ public final class Config {
     public static final String DEMO_LOGIN = "ivanov";
     public static final String DEMO_PASSWORD = "Zi#2026lab";
 
-    // исходные данные варианта 17
+    // вариант 17 (табл. 4.1) — метод парольной защиты для части 1
     public static final String VARIANT = "17";
-    public static final String DEFAULT_P = "1e-4";
-    public static final String DEFAULT_SPEED = "10";
+
+    // вариант 7 (табл. 3) — исходные данные для части 2
+    public static final String VARIANT_PART2 = "7";
+    public static final String PART2_TASK = "P = 10^-6, V = 20 паролей/мин, T = 3 недели";
+    public static final String DEFAULT_P = "1e-6";
+    public static final String DEFAULT_SPEED = "20";
     public static final String DEFAULT_TIME = "3";
     public static final int DEFAULT_PASSWORD_COUNT = 5;
     public static final int MAX_PASSWORD_COUNT = 50;
@@ -40,7 +44,8 @@ public final class Config {
     public static final int PROBABILITY_DIGITS = 6;
 
     // окно и оформление
-    public static final String TITLE = "ЛР №1. Парольная защита — вариант " + VARIANT;
+    public static final String TITLE = "ЛР №1. Парольная защита — вариант " + VARIANT
+            + " (часть 2 — вариант " + VARIANT_PART2 + ")";
     public static final double WINDOW_WIDTH = 980;
     public static final double WINDOW_HEIGHT = 700;
     public static final String MONO_FONT = "Consolas";

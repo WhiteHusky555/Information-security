@@ -77,8 +77,8 @@ public class StrengthView extends BorderPane {
 
         VBox box = new VBox(6, inputs, attempts, bound, error);
         box.setPadding(new Insets(0, 10, 10, 10));
-        TitledPane pane = new TitledPane("Исходные данные варианта " + Config.VARIANT
-                + ": P = 10^-4, V = 10 паролей/мин, T = 3 недели", box);
+        TitledPane pane = new TitledPane("Исходные данные варианта " + Config.VARIANT_PART2
+                + ": " + Config.PART2_TASK, box);
         pane.setCollapsible(false);
         return pane;
     }
